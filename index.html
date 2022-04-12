@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loaded Content by Ajax</title>
+
+    <!-- linking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=PT+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- linking Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7adcc43fab.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="masthead">
+        <div class="desktop-header">
+          <img class="logo" src="./img/portfolio-logo.png" alt="logo" />
+          <div class="masthead-banner-mobile">
+            <h2>Data Around The World</h2>
+          </div>
+
+          <div class="navbar">
+            <a onclick="loadArticles()" id="active">Home</a>
+            <a onclick="loadPortfolio()">Portfolio</a>
+          </div>
+        </div>
+
+        <div class="masthead-banner">
+          <h2>Data Around The World</h2>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper">
+      <div class="articles"></div>
+      <div class="portfolio"></div>
+    </main>
+    <footer class="footer">
+      <div class="contact-info">
+        <p>Name: Alice Lau</p>
+        <p>Email: lau00070@algonquinlive.com</p>
+      </div>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-google"></i>
+        <i class="fab fa-pinterest"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
