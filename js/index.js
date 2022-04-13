@@ -1,6 +1,6 @@
 let articleSelector = document.querySelector(".articles");
 let portfolioSelector = document.querySelector(".portfolio");
-let DATABASE_URL = "../database/database.json";
+let DATABASE_URL = "/hot-topics/database/database.json";
 
 function loadArticles() {
   fetch(DATABASE_URL)
