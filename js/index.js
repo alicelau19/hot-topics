@@ -5,7 +5,7 @@ let DATABASE_URL = "database/database.json";
 function loadArticles() {
   fetch(DATABASE_URL)
     .then((response) => {
-      if (response.status === "200") {
+      if (response.status === 200) {
         return response.json();
       }
       throw new Error(response.status);
@@ -38,7 +38,7 @@ function loadArticles() {
 function loadPortfolio() {
   fetch(DATABASE_URL)
     .then((response) => {
-      if (response.status === "200") {
+      if (response.status === 200) {
         return response.json();
       }
       throw new Error(response.status);
