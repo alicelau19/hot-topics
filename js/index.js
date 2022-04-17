@@ -11,6 +11,7 @@ function loadArticles() {
     }
   })
     .then((response) => {
+      console.log(response);
       if (response.statusText === "OK") {
         return response.json();
       }
