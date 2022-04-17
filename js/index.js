@@ -3,19 +3,12 @@ let portfolioSelector = document.querySelector(".portfolio");
 let DATABASE_URL = "database/database.json";
 
 function loadArticles() {
-  fetch(DATABASE_URL,{
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  })
+  fetch(DATABASE_URL)
     .then((response) => {
-      console.log(response);
-      if (response.statusText === "OK") {
+      if (response.status === "200") {
         return response.json();
       }
-      throw new Error(response.statusText);
+      throw new Error(response.status);
     })
     .then((data) => {
       const articles = data.articles;
@@ -45,10 +38,10 @@ function loadArticles() {
 function loadPortfolio() {
   fetch(DATABASE_URL)
     .then((response) => {
-      if (response.statusText === "OK") {
+      if (response.status === "200") {
         return response.json();
       }
-      throw new Error(response.statusText);
+      throw new Error(response.status);
     })
     .then((data) => {
       const portfolio = data.portfolio;
