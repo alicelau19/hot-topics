@@ -3,7 +3,13 @@ let portfolioSelector = document.querySelector(".portfolio");
 let DATABASE_URL = "database/database.json";
 
 function loadArticles() {
-  fetch(DATABASE_URL)
+  fetch(DATABASE_URL,{
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
     .then((response) => {
       if (response.statusText === "OK") {
         return response.json();
